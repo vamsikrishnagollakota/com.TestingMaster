@@ -1,14 +1,16 @@
 package com.TestCases;
 
-public class Hello_World {
+import org.testng.annotations.Test;
 
-	public static void main(String [] args){ 
+public class Hello_World {
+@Test
+	public static void hELLOWORLD(){ 
 		
 		System.out.println("HELLO WORLD");
 		System.out.println("HELLO WORLD");
 		System.out.println("HELLO WORLD");
-		
-		System.out.println("Jenkins sessions");
+		System.out.println("abc");
+		System.out.println("Jenkins sessions123");
 	}
 	
 	
