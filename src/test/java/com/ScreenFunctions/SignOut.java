@@ -27,7 +27,9 @@ public class SignOut extends GenericFunctions{
 	 
 	 public static boolean validate_SignOut(){
 		assertEquals(userSignIn.getText(), "Sign in");
+		
 		 return true;
+		
 	 }
 	 
 
