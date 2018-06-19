@@ -1,9 +1,12 @@
 package com.TestCases;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericFunctions;
+import com.ScreenFunctions.SignOut;
 import com.ScreenFunctions.Signin;
 import com.ScreenFunctions.SummerDress;
 
@@ -56,7 +59,25 @@ public class TC01_Verify_Summer_Dress_Functionality extends GenericFunctions{
 		
 		status=sumdress.Verify_sortingOrder();
 		System.out.println(status);
-				
+		
+		/*
+		 * Vamsi Gollakota-This functionality is used to logout from the web.
+		 */
+		SignOut sing=PageFactory.initElements(driver, SignOut.class);
+		sing.user_signOut();
+		System.out.println("User is signed out");
+		
+		status=sing.validate_SignOut();	
+		if (status)
+		{
+			System.out.println("SUccessful");
+			logEvent("Pass", "Successful");
+		}
+		else
+		{
+			logEvent("Fail", "Faild");
+		}
+		
 	}
 	
 	
